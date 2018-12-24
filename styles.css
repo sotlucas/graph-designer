@@ -1,0 +1,87 @@
+body {
+    height: 100%;
+    margin: 0; 
+}
+
+.vertice {
+    position: absolute;
+    display: none;
+    top: 0px; left: 0px;
+    width: 50px; height: 50px;
+    border-radius: 100%;
+    border: 5px solid #3E92CC;
+    color: #3E92CC;
+    text-align: center;
+    font-family: sans;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    vertical-align: middle;
+    background: #fff;
+}
+
+.arista {
+    position: absolute;
+    height: 5px;
+    background: linear-gradient(to left, #388659 50%, #3E92CC 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: background-position .5s ease-out;
+    z-index: -1;
+}
+
+.arista:active {
+    background-position: right bottom;
+}
+
+.boton {
+    position: relative;
+    width: 100px; height: 30px;
+    border-radius: 5px;
+    border: 5px #151515 solid;
+    font-weight: 700;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    color: #151515;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: sans;
+    cursor: pointer;
+    transition: 0.08s ease-in;
+    z-index: 1;
+}
+.fill:hover {
+    color: whitesmoke;
+}
+.fill:before {
+    content: "";
+    position: absolute;
+    background: #151515;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+}
+.fill:hover:before {
+    top: 0;
+}
+
+#link {
+    font-family: 'Concert One', sans;
+    bottom: 20px;
+    color: #000;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#link:hover {
+    opacity: 1;
+    text-decoration: none;
+}
